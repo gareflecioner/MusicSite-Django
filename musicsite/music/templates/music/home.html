@@ -1,0 +1,30 @@
+{%extends "music/base.html"%}
+
+{% block Title %}
+Домашняя страница
+{%endblock%}
+
+{% block Body%}
+<div class="text-bg-white me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+<div class="container">
+        <h1>Новая музыка.</h1>
+
+<ul>
+        {%for p in posts%}
+        {%for a in author%}
+        <li>
+                <h2>{{p.title}}</h2>
+                <h4>{{a.name}}</h4>
+                {{p.content}}</p>
+                <hr>
+        </li>
+        {%endfor%}
+        {%endfor%}
+</ul>
+
+
+
+</div>
+</div>
+
+{% endblock %}

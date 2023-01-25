@@ -8,8 +8,10 @@ from .views import *
 
 urlpatterns = [
     path('',home),
-    path('musicians/<slug:author>',musicians),
-    path('albums/<slug:collection>',albums),
+    path('musicians/',musicians),
+    path('albums/',albums),
+    path('about/',about),
+    path('feedback/',feedback),
 ]
 
 if settings.DEBUG:
